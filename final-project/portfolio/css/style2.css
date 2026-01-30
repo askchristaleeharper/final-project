@@ -191,3 +191,22 @@ img {
         grid-template-columns: 1fr;
     }
 }
+
+.project-list {
+  list-style: none;
+  padding: 0;
+}
+
+.project-list li {
+  margin-bottom: 0.75rem;
+}
+
+.project-list a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.project-list a:hover {
+  text-decoration: underline;
+}
