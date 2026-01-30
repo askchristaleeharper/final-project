@@ -1,0 +1,151 @@
+:root {
+    --nav-text: #544F4C;
+    --page-bg: #ffffff;
+    --overlay: rgba(0, 0, 0, 0.18);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    background: var(--page-bg);
+    color: #111;
+    font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* Header */
+.site-header {
+    background: #fff;
+}
+
+.header-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 1.25rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.brand-logo {
+    height: 56px;
+    width: auto;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-list a {
+    color: var(--nav-text);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 400;
+}
+
+.nav-list a:hover {
+    text-decoration: underline;
+}
+
+/* Hero */
+.hero {
+    min-height: 78vh;
+    background:
+        linear-gradient(var(--overlay), var(--overlay)),
+        url("../img/Gallery_02.2.webp");
+    background-repeat: no-repeat;
+    background-size: 155%;
+    background-position: center 85%;
+    display: flex;
+    align-items: center;
+    text-size-adjust: 100%;
+    text-wrap: nowrap;
+    white-space-collapse: collapse;
+    word-break: break-all;
+    overflow-wrap: break-word;
+    margin-block-end: 0px;
+    margin-block-start: 0px;
+    margin-inline-start: 0px;
+    margin-inline-start: 0px;
+
+}
+
+.hero-inner {
+    text-size-adjust: 100%;
+    box-sizing: 100%;
+
+        text-size-adjust: 100%;
+    text-wrap: nowrap;
+    white-space-collapse: collapse;
+    word-break: break-all;
+    overflow-wrap: break-word;
+    margin-block-end: 0px;
+    margin-block-start: 0px;
+    margin-inline-start: 0px;
+    margin-inline-start: 0px;
+}
+
+.hero-title {
+    font-family: "Futura PT", Futura, "Trebuchet MS", Arial, sans-serif;
+    font-size: clamp(3.75rem, 9vw, 8.5rem);
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    color: #fff;
+    text-size-adjust: 100%;
+    box-sizing: content-box;
+
+    width: 100%;
+    margin: 0;
+
+        text-size-adjust: 100%;
+    text-wrap: nowrap;
+    white-space-collapse: collapse;
+    word-break: break-all;
+    overflow-wrap: break-word;
+    margin-block-end: 0px;
+    margin-block-start: 0px;
+    margin-inline-start: 0px;
+    margin-inline-start: 0px;
+}
+
+/* Scoop */
+.hero--scoop {
+    overflow: hidden;
+    clip-path: ellipse(140% 100% at 50% 0%);
+}
+
+/* Responsive */
+@media (max-width: 760px) {
+    .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-list {
+        gap: 0.75rem 1rem;
+    }
+
+    .hero {
+        min-height: 70vh;
+    }
+
+    .hero-title {
+        white-space: normal;
+    }
+
+    /* allow wrap on small screens */
+}

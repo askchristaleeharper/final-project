@@ -1,0 +1,198 @@
+:root {
+    --focus: #5e9ed6;
+    --purple: #6e53a1;
+    --blue-black: #162435;
+    --gray: #dee7ec;
+    --neutral-gray: #f2f2f2;
+    --black: #222;
+    --white: #fff;
+    --black-50: rgba(33, 33, 33, 0.5);
+
+    --max: 1200px;
+}
+
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    color: var(--black);
+    background: var(--neutral-gray);
+    line-height: 1.5;
+}
+
+.wrap {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/*  Header  */
+.site-header {
+    background: var(--white);
+    border-bottom: 1px solid var(--gray);
+}
+
+.header-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    /* vertically centers logo */
+    gap: 2rem;
+}
+
+.site-logo img {
+    height: 52px;
+    width: auto;
+    display: block;
+}
+
+.header-right {
+    margin-left: auto;
+    /* pushes nav to the right */
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Utility links (top row) */
+.utility-nav {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.utility-nav a {
+    font-size: 0.8rem;
+    color: var(--black-50);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.utility-nav a:hover {
+    text-decoration: underline;
+}
+
+.search-btn {
+    width: 16px;
+    height: 16px;
+    background: url("../img/search-icon.svg") center / contain no-repeat;
+    border: none;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+/* Primary nav (second row) */
+.primary-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+}
+
+.primary-nav a {
+    font-family: "Roboto Slab", Georgia, serif;
+    font-size: 0.95rem;
+    text-decoration: none;
+}
+
+.primary-nav a.purple {
+    color: var(--purple);
+    font-weight: 600;
+}
+
+.primary-nav a.bold {
+    color: var(--black);
+    font-weight: 800;
+}
+
+.primary-nav a:hover {
+    text-decoration: underline;
+}
+
+/* Hero */
+.hero {
+    min-height: 480px;
+    background:
+        linear-gradient(rgba(0, 0, 0, .35), rgba(0, 0, 0, .35)),
+        url("../img/tbfbanner.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+.hero-inner {
+    padding: 3rem 1rem;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.hero h1 {
+    font-family: "Roboto Slab", Georgia, serif;
+    font-size: clamp(2rem, 4.2vw, 3.2rem);
+    line-height: 1.1;
+    font-weight: 800;
+    max-width: 22ch;
+}
+
+.hero p {
+    margin-top: 1rem;
+    max-width: 60ch;
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 1.05rem;
+}
+
+.hero-actions {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.hero-btn {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.92);
+    color: var(--purple);
+    text-decoration: none;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.9rem 1.1rem;
+    border-radius: 2px;
+    /* sharp-ish */
+}
+
+.hero-btn:hover {
+    filter: brightness(0.96);
+}
+
+/* Responsive */
+@media (max-width: 760px) {
+    .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-right {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .utility-nav,
+    .primary-nav ul {
+        justify-content: flex-start;
+    }
+
+    .hero {
+        min-height: 420px;
+    }
+}
